@@ -1,0 +1,171 @@
+---
+layout: default
+title: "Moon Robot Project"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ page.title }}</title>
+  <!-- Inline styling for a quick "cool" look -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", sans-serif;
+      background: linear-gradient(120deg, #222222, #2d2d2d);
+      color: #ffffff;
+    }
+    header {
+      background: #333333;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .section-title {
+      margin-top: 2rem;
+      color: #e6dd00;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      border-left: 4px solid #e6dd00;
+      padding-left: 0.5rem;
+    }
+    img {
+      max-width: 100%;
+      border: 2px solid #e6dd00;
+      margin: 1rem 0;
+    }
+    .button {
+      display: inline-block;
+      background: #e6dd00;
+      color: #000;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background: #ffeb3b; /* Slightly lighter highlight */
+    }
+    code, pre {
+      background: #444444;
+      color: #e6e6e6;
+      padding: 0.5rem;
+      border-radius: 4px;
+      display: block;
+      margin: 1rem 0;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Moon Robot Project</h1>
+  </header>
+ 
+  <div class="container">
+    <p>
+      Welcome to my high school science and engineering project page! This mobile robot is designed
+      to clean solar panels on the Moon. It features custom 3D-printed feet and a brush assembly,
+      along with special gecko-inspired adhesive for reliable traction in low-gravity, dusty
+      environments.
+    </p>
+
+    <!-- Section: 3D Printed Parts -->
+    <h2 class="section-title">3D-Printed Parts</h2>
+    <p>
+      I designed and printed two main parts:
+      <ul>
+        <li><strong>Robot Feet</strong> with gecko adhesive technology.</li>
+        <li><strong>Brush Assembly</strong> for sweeping dust off the solar panels.</li>
+      </ul>
+    </p>
+    <p>
+      <img src="./images/robot_feet.jpg" alt="Robot feet with gecko adhesive" />
+      <br />
+      <!-- Link to the 3D print file for the robot feet -->
+      <a href="./files/robot_feet.stl" class="button" download>Download Robot Feet STL</a>
+    </p>
+
+    <p>
+      <img src="./images/brush_assembly.jpg" alt="Brush assembly" />
+      <br />
+      <!-- Link to the 3D print file for the brush assembly -->
+      <a href="./files/brush_assembly.stl" class="button" download>Download Brush Assembly STL</a>
+    </p>
+
+    <!-- Section: Gecko Adhesive Explanation -->
+    <h2 class="section-title">Gecko Adhesive Technology</h2>
+    <p>
+      The feet of the robot use a specialized gecko adhesive concept, which emulates the setae on
+      a gecko’s feet. This adhesive is highly effective for clinging to surfaces even in low-pressure
+      or microgravity environments. By implementing this on the robot’s feet, the robot can maintain
+      stable contact with lunar solar panels or other surfaces without slipping.
+    </p>
+
+    <!-- Section: Python Code -->
+    <h2 class="section-title">Python Code</h2>
+    <p>
+      All motion and sensor logic is controlled by a Python script running on a Raspberry Pi.
+      Below is a snippet from the main control file:
+    </p>
+    <pre><code class="language-python">
+# robot_control.py
+
+import time
+import RPi.GPIO as GPIO
+
+# Example pins for motors
+LEFT_MOTOR_PIN = 17
+RIGHT_MOTOR_PIN = 18
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LEFT_MOTOR_PIN, GPIO.OUT)
+GPIO.setup(RIGHT_MOTOR_PIN, GPIO.OUT)
+
+def forward(duration):
+    GPIO.output(LEFT_MOTOR_PIN, GPIO.HIGH)
+    GPIO.output(RIGHT_MOTOR_PIN, GPIO.HIGH)
+    time.sleep(duration)
+    GPIO.output(LEFT_MOTOR_PIN, GPIO.LOW)
+    GPIO.output(RIGHT_MOTOR_PIN, GPIO.LOW)
+
+def main():
+    print("Starting cleaning sequence...")
+    # Move forward for 2 seconds
+    forward(2)
+    # Additional logic for cleaning routine
+    # ...
+    print("Cleaning complete!")
+
+if __name__ == "__main__":
+    main()
+    GPIO.cleanup()
+    </code></pre>
+
+    <p>
+      <a href="./code/robot_control.py" class="button">Full Python Script</a>
+    </p>
+
+    <!-- Additional info or call-to-action -->
+    <h2 class="section-title">Learn More</h2>
+    <p>
+      Check out the rest of my site for videos, detailed logs, and the science fair poster!
+      If you have any questions about this project, feel free to reach out to me or
+      <a href="mailto:example@example.com" style="color: #e6dd00;">send me an email</a>.
+    </p>
+  </div>
+</body>
+</html>
