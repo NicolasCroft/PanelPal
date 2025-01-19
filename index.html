@@ -1,172 +1,84 @@
 ---
-<!-- This is a comment -->
-<!-- layout: default -->
-title: "Moon Robot Project"
+layout: default
+title: "PanelPal Lunar Robot Project"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="A high school product engineering project to build a lunar solar panel-cleaning robot.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
-  <!-- Inline styling for a quick "cool" look -->
-  <style>
-    body {
-      margin: 0;
-      font-family: "Trebuchet MS", sans-serif;
-      background: linear-gradient(120deg, #222222, #2d2d2d);
-      color: #ffffff;
-    }
-    header {
-      background: #333333;
-      text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .section-title {
-      margin-top: 2rem;
-      color: #e6dd00;
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      border-left: 4px solid #e6dd00;
-      padding-left: 0.5rem;
-    }
-    img {
-      max-width: 100%;
-      border: 2px solid #e6dd00;
-      margin: 1rem 0;
-    }
-    .button {
-      display: inline-block;
-      background: #e6dd00;
-      color: #000;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      margin: 0.5rem 0;
-      transition: background 0.3s;
-      border-radius: 4px;
-    }
-    .button:hover {
-      background: #ffeb3b; /* Slightly lighter highlight */
-    }
-    code, pre {
-      background: #444444;
-      color: #e6e6e6;
-      padding: 0.5rem;
-      border-radius: 4px;
-      display: block;
-      margin: 1rem 0;
-      white-space: pre-wrap;
-    }
-  </style>
+  <!-- Cayman theme will handle basic styling -->
 </head>
 <body>
-  <header>
-    <h1>Moon Robot Project</h1>
-  </header>
- 
-  <div class="container">
+  <main>
+    <h1>PanelPal: A Lunar Robot for Cleaning Solar Panels</h1>
     <p>
-      Welcome to NOthing This mobile robot is designed
-      to do nothing. It features custom 3D-printed feet and a brush assembly,
-      along with special gecko-inspired adhesive for reliable traction in low-gravity, dusty
-      environments.
+      Welcome to the PanelPal project page! This robot was developed in a high school product engineering class using a PiCrawler kit as the foundation.
+      <strong>PanelPal</strong> is designed to crawl across solar panels on the lunar surface and clean them with a custom 3D-printed brush mechanism.
+      To adhere to the smooth panel surfaces, it uses gecko-inspired adhesive on its 3D-printed feet.
     </p>
 
-    <!-- Section: 3D Printed Parts -->
-    <h2 class="section-title">3D-Printed Parts</h2>
+    <!-- Robot Image -->
+    <figure style="max-width: 400px;">
+      <!-- Replace 'images/panelpal_robot.jpg' with your actual image path -->
+      <img src="images/panelpal_robot.jpg" alt="PanelPal Robot" style="width:100%;">
+      <figcaption>PanelPal robot prototype on display</figcaption>
+    </figure>
+
+    <h2>Project Resources</h2>
+    <ul>
+      <li><a href="./code/">Python Code</a> (folder containing the robot control scripts)</li>
+      <li><a href="./3d models/">3D Models</a> (folder with STL files for the 3D-printed parts)</li>
+    </ul>
+
+    <!-- Embedded Video: "panelpal_compressed.mp4" -->
+    <h3>Watch PanelPal in Action</h3>
+    <p>Click the thumbnail below to see the robot crawl and brush in real time!</p>
+    <a href="panelpal_compressed.mp4" target="_blank">
+      <!-- Replace 'images/video_thumbnail.jpg' with your actual thumbnail image path -->
+      <img src="images/video_thumbnail.jpg" alt="Click to watch PanelPal in action" style="max-width:200px;">
+    </a>
+
+    <!-- Embedded PDF using Google Drive viewer -->
+    <h3>Project Presentation</h3>
     <p>
-      I designed and printed two main parts:
-      <ul>
-        <li><strong>Robot Feet</strong> with gecko adhesive technology.</li>
-        <li><strong>Brush Assembly</strong> for sweeping dust off the solar panels.</li>
-      </ul>
+      Below is an embedded slideshow (PDF) detailing the entire project development process.  
+      Use the arrows in the viewer to navigate through the slides.
+    </p>
+    <iframe
+      src="https://drive.google.com/file/d/YOUR_GOOGLE_DRIVE_FILE_ID/preview"
+      width="640"
+      height="480"
+      allow="autoplay">
+    </iframe>
+    <!--
+      Replace YOUR_GOOGLE_DRIVE_FILE_ID with the actual ID from your PDF's shareable link.
+      Example share link: https://drive.google.com/file/d/XXXXXXXXXXXXXX/view?usp=sharing
+      The ID is the part after "d/" and before "/view".
+    -->
+
+    <h3>How We Built It</h3>
+    <p>
+      <strong>Hardware:</strong> PiCrawler kit as a base platform, modified with custom 3D-printed feet
+      featuring gecko adhesive for lunar panel traction. A 3D-printed brush assembly is mounted on the robot’s front to remove dust.
     </p>
     <p>
-      <img src="./images/robot_feet.jpg" alt="Robot feet with gecko adhesive" />
-      <br />
-      <!-- Link to the 3D print file for the robot feet -->
-      <a href="./files/robot_feet.stl" class="button" download>Download Robot Feet STL</a>
+      <strong>Software:</strong> Python scripts (in the <a href="./code/">code folder</a>) control
+      the motors and servos that drive the feet and operate the brush mechanism.
     </p>
-
     <p>
-      <img src="./images/brush_assembly.jpg" alt="Brush assembly" />
-      <br />
-      <!-- Link to the 3D print file for the brush assembly -->
-      <a href="./files/brush_assembly.stl" class="button" download>Download Brush Assembly STL</a>
+      <strong>3D Files:</strong> All custom parts (feet, brush attachment) can be found in the
+      <a href="./3d models/">3D Models folder</a>, ready for printing.
     </p>
 
-    <!-- Section: Gecko Adhesive Explanation -->
-    <h2 class="section-title">Gecko Adhesive Technology</h2>
+    <h2>Get in Touch</h2>
     <p>
-      The feet of the robot use a specialized gecko adhesive concept, which emulates the setae on
-      a gecko’s feet. This adhesive is highly effective for clinging to surfaces even in low-pressure
-      or microgravity environments. By implementing this on the robot’s feet, the robot can maintain
-      stable contact with lunar solar panels or other surfaces without slipping.
+      Have questions, suggestions, or want to replicate this project?
+      Feel free to open an issue or submit a pull request on our <a href="https://github.com/YourUserName/YourRepoName" target="_blank">GitHub repository</a>.
     </p>
-
-    <!-- Section: Python Code -->
-    <h2 class="section-title">Python Code</h2>
-    <p>
-      All motion and sensor logic is controlled by a Python script running on a Raspberry Pi.
-      Below is a snippet from the main control file:
-    </p>
-    <pre><code class="language-python">
-# robot_control.py
-
-import time
-import RPi.GPIO as GPIO
-
-# Example pins for motors
-LEFT_MOTOR_PIN = 17
-RIGHT_MOTOR_PIN = 18
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(LEFT_MOTOR_PIN, GPIO.OUT)
-GPIO.setup(RIGHT_MOTOR_PIN, GPIO.OUT)
-
-def forward(duration):
-    GPIO.output(LEFT_MOTOR_PIN, GPIO.HIGH)
-    GPIO.output(RIGHT_MOTOR_PIN, GPIO.HIGH)
-    time.sleep(duration)
-    GPIO.output(LEFT_MOTOR_PIN, GPIO.LOW)
-    GPIO.output(RIGHT_MOTOR_PIN, GPIO.LOW)
-
-def main():
-    print("Starting cleaning sequence...")
-    # Move forward for 2 seconds
-    forward(2)
-    # Additional logic for cleaning routine
-    # ...
-    print("Cleaning complete!")
-
-if __name__ == "__main__":
-    main()
-    GPIO.cleanup()
-    </code></pre>
-
-    <p>
-      <a href="./code/robot_control.py" class="button">Full Python Script</a>
-    </p>
-
-    <!-- Additional info or call-to-action -->
-    <h2 class="section-title">Learn More</h2>
-    <p>
-      Check out the rest of my site for videos, detailed logs, and the science fair poster!
-      If you have any questions about this project, feel free to reach out to me or
-      <a href="mailto:example@example.com" style="color: #e6dd00;">send me an email</a>.
-    </p>
-  </div>
+  </main>
 </body>
 </html>
