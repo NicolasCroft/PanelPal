@@ -1,7 +1,7 @@
 title: "Lunar Solar-Panel-Cleaning Robot"
 description: "A high school engineering project demonstrating a Python-coded robot on the Moon."
-#theme: jekyll-theme-cayman # or any other supported theme
-remote_theme: mmistakes/minimal-mistakes # example of remote theme usage
+theme: jekyll-theme-cayman # or any other supported theme
+#remote_theme: mmistakes/minimal-mistakes # example of remote theme usage
 # Note: if using remote_theme, remove or comment out 'theme: jekyll-theme-cayman'
 
 # Optional configuration:
